@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import authService from '../services/authService';
+import './Login.css';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -20,46 +21,57 @@ const Login = () => {
   };
 
   return (
-    <div className="p-8 max-w-md mx-auto mt-20 mb-20 bg-white rounded-lg shadow-md border border-gray-100">
-      <h2 className="text-3xl font-bold mb-6 text-center text-gray-800">Welcome Back</h2>
-      {error && (
-        <div className="bg-red-50 border-l-4 border-red-500 p-4 mb-6">
-          <p className="text-red-700 text-sm">{error}</p>
+    <div className="authContainer">
+      <div className="authCardWrapper">
+        <Link to="/home" className="backToHome">
+          <span>← Back to Home</span>
+        </Link>
+        
+        <div className="authCard">
+          <h2 className="authTitle">Sign in</h2>
+          <p className="authSubtitle">Please enter your credentials to access your account</p>
+          
+          {error && (
+            <div className="authError">
+              {error}
+            </div>
+          )}
+          
+          <form onSubmit={handleLogin} className="authForm">
+            <div className="formGroup">
+              <label>Email</label>
+              <input 
+                type="email" 
+                value={email} 
+                onChange={e => setEmail(e.target.value)} 
+                required 
+                placeholder="you@example.com"
+              />
+            </div>
+            
+            <div className="formGroup">
+              <label>Password</label>
+              <input 
+                type="password" 
+                value={password} 
+                onChange={e => setPassword(e.target.value)} 
+                required 
+                placeholder="••••••••"
+              />
+            </div>
+            
+            <button type="submit" className="authButton">
+              Login
+            </button>
+          </form>
+          
+          <div className="authFooter">
+            <p>
+              Don't have an account? <Link to="/signup">Register here</Link>
+            </p>
+          </div>
         </div>
-      )}
-      <form onSubmit={handleLogin} className="space-y-5">
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
-          <input 
-            type="email" 
-            value={email} 
-            onChange={e => setEmail(e.target.value)} 
-            required 
-            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" 
-            placeholder="you@example.com"
-          />
-        </div>
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">Password</label>
-          <input 
-            type="password" 
-            value={password} 
-            onChange={e => setPassword(e.target.value)} 
-            required 
-            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" 
-            placeholder="••••••••"
-          />
-        </div>
-        <button 
-          type="submit" 
-          className="w-full bg-blue-600 text-white font-semibold py-2 px-4 rounded-md hover:bg-blue-700 transition duration-300 ease-in-out"
-        >
-          Login
-        </button>
-      </form>
-      <p className="mt-6 text-center text-gray-600 text-sm">
-        Don't have an account? <Link to="/signup" className="text-blue-600 hover:underline font-medium">Sign up here</Link>
-      </p>
+      </div>
     </div>
   );
 };

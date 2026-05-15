@@ -15,21 +15,29 @@ import ProtectedRoute from './components/ProtectedRoute';
 import { CartProvider } from './context/CartContext';
 import './App.css';
 
+const NavSlot = ({ searchQuery, onSearchChange }) => {
+  const location = useLocation();
+  const hideNavbar = location.pathname === '/login' || location.pathname === '/signup';
+
+  if (hideNavbar) return null;
+  return <Navbar searchQuery={searchQuery} onSearchChange={onSearchChange} />;
+};
+
+const FooterSlot = () => {
+  const location = useLocation();
+  const showNewsletter = !location.pathname.startsWith('/product/') && !location.pathname.startsWith('/cart') && !location.pathname.startsWith('/web-cart');
+
+  return <SiteFooter showNewsletter={showNewsletter} />;
+};
+
 function App() {
   const [searchQuery, setSearchQuery] = useState('');
-
-  const FooterSlot = () => {
-    const location = useLocation();
-    const showNewsletter = !location.pathname.startsWith('/product/') && !location.pathname.startsWith('/cart') && !location.pathname.startsWith('/web-cart');
-
-    return <SiteFooter showNewsletter={showNewsletter} />;
-  };
 
   return (
     <CartProvider>
     <Router>
       <div className="appShell">
-        <Navbar searchQuery={searchQuery} onSearchChange={setSearchQuery} />
+        <NavSlot searchQuery={searchQuery} onSearchChange={setSearchQuery} />
         <main className="appMain">
           <Routes>
             <Route path="/" element={<Home searchQuery={searchQuery} />} />

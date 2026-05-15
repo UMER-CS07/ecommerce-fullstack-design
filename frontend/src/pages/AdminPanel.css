@@ -30,6 +30,12 @@
   color: #64748b;
 }
 
+.adminHeaderActions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
 /* ── Buttons ── */
 .btnPrimary {
   display: inline-flex;
@@ -45,6 +51,7 @@
   cursor: pointer;
   transition: all 0.2s;
   box-shadow: 0 1px 3px rgba(37, 99, 235, 0.25);
+  text-decoration: none;
 }
 .btnPrimary:hover {
   background: linear-gradient(135deg, #2563eb, #1d4ed8);
@@ -53,6 +60,9 @@
 }
 
 .btnSecondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   padding: 10px 20px;
   font-size: 0.875rem;
   font-weight: 600;
@@ -62,6 +72,7 @@
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.2s;
+  text-decoration: none;
 }
 .btnSecondary:hover {
   background: #e2e8f0;

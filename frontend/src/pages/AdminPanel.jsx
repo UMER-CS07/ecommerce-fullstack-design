@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './AdminPanel.css';
 
@@ -112,10 +113,16 @@ const AdminPanel = () => {
           <h1>Admin Panel</h1>
           <p className="adminSubtitle">Manage your product inventory</p>
         </div>
-        <button className="btnPrimary" onClick={openNewModal}>
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 2v12M2 8h12" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/></svg>
-          New Product
-        </button>
+        <div className="adminHeaderActions">
+          <Link to="/home" className="btnSecondary">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M14 8H2M8 2l-6 6 6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+            Back to Store
+          </Link>
+          <button className="btnPrimary" onClick={openNewModal}>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 2v12M2 8h12" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/></svg>
+            New Product
+          </button>
+        </div>
       </div>
 
       {successMsg && <div className="alertSuccess">{successMsg}</div>}
