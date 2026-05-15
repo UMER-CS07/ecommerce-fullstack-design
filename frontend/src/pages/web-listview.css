@@ -1,0 +1,585 @@
+.forceListViewContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.forceListViewContainer .listBreadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  color: #8b96a5;
+  font-size: 13px;
+  margin-top: 2px;
+}
+
+.forceListViewContainer .listBreadcrumbs,
+.forceListViewContainer .catalogShell {
+  width: 100%;
+}
+
+.forceListViewContainer .listBreadcrumbs a {
+  color: #8b96a5;
+  text-decoration: none;
+}
+
+.forceListViewContainer .listBreadcrumbs strong {
+  color: #1a1a1a;
+  font-weight: 500;
+}
+
+.forceListViewContainer .catalogShell {
+  display: grid;
+  grid-template-columns: 240px 920px;
+  gap: 16px;
+  align-items: start;
+}
+
+.forceListViewContainer .catalogSidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 240px;
+  height: 241.3px;
+}
+
+.forceListViewContainer .filterBlock {
+  padding: 14px 14px 16px;
+}
+
+.forceListViewContainer .filterHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-left: -12px;
+  margin-bottom: 12px;
+  border-top: 1px solid #DEE2E7;
+  padding: 10px;
+}
+
+.forceListViewContainer .filterToggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: #8b96a5;
+  cursor: pointer;
+  flex: 0 0 auto;
+}
+
+.forceListViewContainer .dropdownIcon,
+.forceListViewContainer .featuredSelectIcon {
+  display: block;
+  width: 12px;
+  height: 12px;
+  object-fit: contain;
+  transition: transform 0.18s ease;
+}
+
+.forceListViewContainer .filterToggle[aria-expanded='false'] .dropdownIcon {
+  transform: rotate(180deg);
+}
+
+.forceListViewContainer .featuredSelectIcon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.forceListViewContainer .filterHeader h3 {
+  margin: 0;
+  color: #1a1a1a;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.forceListViewContainer .filterHeader span {
+  color: #8b96a5;
+  font-size: 14px;
+}
+
+.forceListViewContainer .filterItems {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.forceListViewContainer .filterChoice {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #505050;
+  font-size: 13px;
+}
+
+.forceListViewContainer .filterLink {
+  width: fit-content;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: #8b96a5;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.forceListViewContainer .filterLink.active,
+.forceListViewContainer .filterLink:hover {
+  color: #1a73e8;
+}
+
+.forceListViewContainer .filterLinkExtra {
+  margin-left: 28px;
+}
+
+.forceListViewContainer .seeAllButton {
+  width: fit-content;
+  border: 0;
+  padding: 0;
+  margin-top: 2px;
+  background: transparent;
+  color: #1a73e8;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.forceListViewContainer .seeAllButton:hover {
+  text-decoration: underline;
+}
+
+.forceListViewContainer .filterChoice input {
+  width: 14px;
+  height: 14px;
+  margin: 0;
+  accent-color: #1a73e8;
+}
+
+.forceListViewContainer .filterChoice.active,
+.forceListViewContainer .filterChoice:hover {
+  color: #1a73e8;
+}
+
+.forceListViewContainer .priceRangeWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.forceListViewContainer .priceTrack {
+  position: relative;
+  height: 22px;
+}
+
+.forceListViewContainer .priceTrack::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 4px;
+  transform: translateY(-50%);
+  border-radius: 999px;
+  background: #d9e2ec;
+}
+
+.forceListViewContainer .priceActive {
+  position: absolute;
+  left: 20%;
+  right: 20%;
+  top: 50%;
+  height: 4px;
+  transform: translateY(-50%);
+  border-radius: 999px;
+  background: #1a73e8;
+}
+
+.forceListViewContainer .priceHandle {
+  position: absolute;
+  top: 50%;
+  width: 14px;
+  height: 14px;
+  transform: translate(-50%, -50%);
+  border: 2px solid #1a73e8;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.forceListViewContainer .priceHandle.left {
+  left: 22%;
+}
+
+.forceListViewContainer .priceHandle.right {
+  left: 78%;
+}
+
+.forceListViewContainer .priceFields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.forceListViewContainer .priceFields label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  color: #8b96a5;
+  font-size: 12px;
+}
+
+.forceListViewContainer .priceFields input {
+  height: 32px;
+  border: 1px solid #dfe4ea;
+  border-radius: 4px;
+  padding: 0 10px;
+  font: inherit;
+}
+
+.forceListViewContainer .applyButton {
+  height: 32px;
+  border: 1px solid #dfe4ea;
+  border-radius: 4px;
+  background: #f8fbff;
+  color: #1a73e8;
+  cursor: pointer;
+}
+
+.forceListViewContainer .ratingRows {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.forceListViewContainer .ratingStars {
+  color: #f59e0b;
+  letter-spacing: 1px;
+}
+
+.forceListViewContainer .filterChoice.active .ratingStars {
+  color: #f59e0b;
+}
+
+.forceListViewContainer .catalogContent {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 920px;
+}
+
+.forceListViewContainer .catalogToolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  background: #fff;
+  box-sizing: border-box;
+  min-height: 62px;
+}
+
+.forceListViewContainer .catalogCount {
+  color: #1a1a1a;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.forceListViewContainer .catalogControls {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  color: #505050;
+  font-size: 13px;
+}
+
+.forceListViewContainer .verifiedToggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: 144px;
+  height: 36px;
+  box-sizing: border-box;
+  padding: 0 12px;
+  border-radius: 2px;
+  background: #fff;
+  color: #505050;
+}
+
+.forceListViewContainer .verifiedToggle input {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  accent-color: #1a73e8;
+}
+
+.forceListViewContainer .featuredButton,
+.forceListViewContainer .viewButton,
+.forceListViewContainer .pageSizeButton,
+.forceListViewContainer .pageArrow,
+.forceListViewContainer .pageNum {
+  border: 1px solid #dfe4ea;
+  background: #fff;
+  color: #505050;
+  cursor: pointer;
+}
+
+.forceListViewContainer .featuredSelectWrap {
+  position: relative;
+  width: 172px;
+  height: 40px;
+  box-sizing: border-box;
+  border: 1px solid #dfe4ea;
+  margin-left: 8px;
+  border-radius: 0;
+  background: #fff;
+}
+
+.forceListViewContainer .featuredSelect {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  padding: 0 34px 0 12px;
+  background: transparent;
+  color: #505050;
+  font: inherit;
+  appearance: none;
+  cursor: pointer;
+}
+
+.forceListViewContainer .viewButton {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.forceListViewContainer .viewButton.active,
+.forceListViewContainer .pageNum.active {
+  border-color: #1a73e8;
+  color: #1a73e8;
+  background-color: #eff2f4;
+}
+
+.forceListViewContainer .viewButton:first-of-type {
+  margin-left: 8px;
+}
+
+.forceListViewContainer .productList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.forceListViewContainer .productCard {
+  position: relative;
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 12px;
+  padding: 12px 14px 12px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  background: #fff;
+  box-sizing: border-box;
+  height: auto !important;
+  width: 100% !important;
+  cursor: pointer;
+  align-items: flex-start;
+}
+
+.forceListViewContainer .productCard:focus-visible {
+  outline: 2px solid #1a73e8;
+  outline-offset: 2px;
+}
+
+.forceListViewContainer .productVisual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 210px !important;
+  min-width: 210px !important;
+  height: 210px !important;
+  min-height: 210px !important;
+  border-radius: 6px;
+  background: linear-gradient(180deg, #fff 0%, #fbfcfe 100%);
+  flex-shrink: 0;
+}
+
+.forceListViewContainer .productVisual img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.forceListViewContainer .productBody {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px;
+  min-width: 0;
+  flex: 1 !important;
+}
+
+.forceListViewContainer .productTopRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.forceListViewContainer .productTopRow h3 {
+  margin: 0;
+  color: #1a1a1a;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.forceListViewContainer .wishButton {
+  position: absolute;
+  left: 850px;
+  top: 28px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #dfe4ea;
+  border-radius: 6px;
+  background: #fff;
+  color: #0D6EFD;
+  cursor: pointer;
+  font-size: 24px;
+  flex: 0 0 auto;
+}
+
+.forceListViewContainer .viewDetailsButton {
+  width: fit-content;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: #0D6EFD;
+  font: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.forceListViewContainer .productPriceRow {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.forceListViewContainer .productPriceRow strong {
+  color: #1a1a1a;
+  font-size: 18px;
+  margin-top: -12px;
+}
+
+.forceListViewContainer .oldPrice {
+  color: #8b96a5;
+  font-size: 13px;
+  text-decoration: line-through;
+}
+
+.forceListViewContainer .productMeta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  color: #8b96a5;
+  font-size: 16px;
+}
+
+.forceListViewContainer .ratingValue {
+  color: #f59e0b;
+  height: 15px;
+  margin-bottom: 10px;
+  width: 80px;
+}
+
+.forceListViewContainer .freeShipping {
+  color: #00B517;
+  font-size: 16px;
+}
+
+.forceListViewContainer .productBody p {
+  margin: 0;
+  color: #606b7b;
+  font-size: 16px;
+  line-height: 1.4;
+  max-width: 640px;
+}
+
+.forceListViewContainer .productBody a {
+  width: fit-content;
+  color: #0D6EFD;
+  font-weight: 500;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.forceListViewContainer .paginationBar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 2px;
+  width: 100%;
+}
+
+.forceListViewContainer .pageSizeButton {
+  height: 32px;
+  padding: 0 12px;
+  border-radius: 4px;
+}
+
+.forceListViewContainer .pageButtons {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.forceListViewContainer .pageArrow,
+.forceListViewContainer .pageNum {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+}
+
+@media (max-width: 1100px) {
+
+  .forceListViewContainer,
+  .forceListViewContainer .catalogContent,
+  .forceListViewContainer .catalogSidebar {
+    width: 100%;
+    max-width: none;
+  }
+
+  .forceListViewContainer .catalogShell {
+    grid-template-columns: 1fr;
+  }
+
+  .forceListViewContainer .catalogSidebar {
+    order: 2;
+  }
+
+  .forceListViewContainer .catalogToolbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .forceListViewContainer .paginationBar {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,29 @@
+# Dependencies
+frontend/node_modules/
+backend/vendor/bundle/
+
+# Build output
+frontend/dist/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+backend/log/
+backend/tmp/
+frontend/.vite/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Backend storage/cache
+backend/storage/
+backend/tmp/

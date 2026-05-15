@@ -1,0 +1,314 @@
+.nb {
+  width: 100%;
+  background: #fff;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.nbTop {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1440px;
+  height: 86px;
+  margin: 0 auto;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  width: 150px;
+  height: 46px;
+  margin-left: 130px;
+  flex: 0 0 auto;
+}
+
+.logo {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #d5e5ff;
+  overflow: visible;
+}
+
+.logoShadow {
+  position: absolute;
+  left: -5px;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background: #2f80ff;
+}
+
+.logoMark {
+  position: relative;
+  z-index: 1;
+  color: #9cc2ff;
+  opacity: 0.72;
+}
+
+.name {
+  font-size: 26px;
+  font-weight: 700;
+  color: #8CB7F5;
+  opacity: 0.72;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  width: 665px;
+  height: 40px;
+  margin-left: 46px;
+  flex: 0 0 auto;
+  border: 2.5px solid #2f80ff;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.search input {
+  flex: 1;
+  height: 100%;
+  padding: 0 18px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  color: #333;
+  background: #fff;
+}
+
+.search input::placeholder {
+  color: #9aa3ad;
+}
+
+.cat {
+  height: 100%;
+  min-width: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border: none;
+  border-left: 1px solid #d9dde2;
+  background: #fff;
+  color: #1a1a1a;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn {
+  height: 100%;
+  padding: 0 28px;
+  border: none;
+  background: #2f80ff;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #1f6fe5;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 228px;
+  height: 41px;
+  margin-left: 89px;
+  margin-right: 132px;
+  flex: 0 0 auto;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 0;
+  border: none;
+  background: none;
+  text-decoration: none;
+  color: #8b95a1;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.item svg {
+  width: 22px;
+  height: 22px;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+.item:hover,
+.item:hover svg {
+  color: #2f80ff;
+}
+
+.cartBadge {
+  display: inline-block;
+  min-width: 20px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 12px;
+  text-align: center;
+  background: #ff3b30;
+  color: #fff;
+  border-radius: 999px;
+  padding: 0 6px;
+  margin-left: 6px;
+}
+
+.nb2 {
+  width: 100%;
+  height: 56px;
+  background: #fff;
+  border-top: 1px solid #eef0f3;
+  border-bottom: 1px solid #eef0f3;
+  font-family: Inter, 'Segoe UI', Arial, sans-serif;
+}
+
+.nb2Inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1440px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.nb2Left {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  width: auto;
+  height: 24px;
+  margin-left: 130px;
+}
+
+.nb2Lang {
+  display: flex;
+  align-items: center;
+  width: auto;
+  height: 24px;
+  margin-left: auto;
+  margin-right: 26px;
+}
+
+.nb2Ship {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: auto;
+  height: 24px;
+  margin-left: 20px;
+  margin-right: 132px;
+}
+
+.catBtn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0;
+  border: none;
+  background: none;
+  color: #1a1a1a;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  cursor: pointer;
+}
+
+.bars {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.bars span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  border-radius: 2px;
+  background: #1a1a1a;
+}
+
+.nlink {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0;
+  border: none;
+  background: none;
+  color: #1a1a1a;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  cursor: pointer;
+}
+
+.nb2Left .nlink {
+  height: 22px;
+}
+
+.nb2Lang .nlink,
+.nb2Ship .nlink {
+  height: 22px;
+}
+
+.nlink:hover {
+  color: #2f80ff;
+}
+
+.flag {
+  width: 20px;
+  height: 14px;
+  border-radius: 2px;
+  display: inline-block;
+  background: linear-gradient(to bottom, #000 33%, #dd0000 33%, #dd0000 66%, #ffce00 66%);
+}
+
+@media (max-width: 900px) {
+  .nbTop,
+  .nb2Inner {
+    flex-wrap: wrap;
+    height: auto;
+  }
+
+  .brand,
+  .search,
+  .icons,
+  .nb2Left,
+  .nb2Lang,
+  .nb2Ship {
+    margin: 0;
+    width: 100%;
+  }
+
+  .search {
+    order: 3;
+    margin-top: 12px;
+  }
+
+  .icons,
+  .nb2Left,
+  .nb2Lang,
+  .nb2Ship {
+    justify-content: flex-start;
+    margin-top: 12px;
+  }
+
+  .nb2Inner {
+    padding: 10px 20px;
+  }
+}

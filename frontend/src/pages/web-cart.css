@@ -1,0 +1,425 @@
+.cartPage {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.cartPageTitleRow h1,
+.cartPage {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.cartPageTitleRow h1,
+.savedLaterSection h2 {
+  margin: 0;
+  color: #1a1a1a;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.cartTopGrid {
+  display: grid;
+  grid-template-columns: 880px 280px;
+  gap: 20px;
+  align-items: start;
+}
+
+.cartListPanel,
+.cartSummaryPanel,
+.savedLaterSection {
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.cartListPanel {
+  padding: 0 0 8px;
+}
+
+.cartItemRow {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr);
+  gap: 12px;
+  padding: 12px 14px;
+  border-bottom: 1px solid #eef0f3;
+}
+
+.cartItemImage {
+  width: 72px;
+  height: 72px;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  object-fit: contain;
+  background: #fff;
+}
+
+.cartItemBody {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cartItemTop {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.cartItemTop h3 {
+  margin: 0 0 4px;
+  color: #1a1a1a;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.cartItemTop p,
+.cartItemTop span {
+  display: block;
+  margin: 0;
+  color: #8b96a5;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.cartItemTop strong {
+  color: #1a1a1a;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.cartItemActions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.actionLinks {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.removeBtn,
+.removeAllBtn {
+  border: 1px solid #dfe4ea;
+  border-radius: 4px;
+  background: #fff;
+  color: #e81a1a;
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.saveBtn {
+  border: 1px solid #dfe4ea;
+  border-radius: 4px;
+  background: #fff;
+  color: #1a73e8;
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.removeBtn,
+.saveBtn {
+  padding: 0 10px;
+  height: 24px;
+}
+
+.qtySelectWrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 30px;
+  padding: 0 10px;
+  border: 1px solid #dfe4ea;
+  border-radius: 4px;
+  color: #505050;
+  font-size: 12px;
+}
+
+.qtySelectWrap select {
+  border: 0;
+  background: transparent;
+  font: inherit;
+  color: #505050;
+  outline: none;
+}
+
+.cartListFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px 4px;
+}
+
+.backBtn,
+.removeAllBtn {
+  height: 32px;
+  padding: 0 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.backBtn {
+  border: 0;
+  background: #1a73e8;
+  color: #fff;
+  gap: 6px;
+  border-radius: 4px;
+}
+
+.cartSummaryPanel {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.couponBox,
+.totalsBox {
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  background: #fff;
+}
+
+.couponBox {
+  padding: 12px;
+}
+
+.couponBox h3,
+.savedLaterSection h2 {
+  margin: 0 0 10px;
+  font-size: 14px;
+}
+
+.couponInputRow {
+  display: flex;
+  gap: 8px;
+}
+
+.couponInputRow input {
+  flex: 1;
+  height: 34px;
+  border: 1px solid #dfe4ea;
+  border-radius: 4px;
+  padding: 0 10px;
+  font: inherit;
+  font-size: 12px;
+}
+
+.couponInputRow button {
+  width: 60px;
+  border: 1px solid #dfe4ea;
+  border-radius: 4px;
+  background: #fff;
+  color: #1a73e8;
+  cursor: pointer;
+}
+
+.totalsBox {
+  padding: 12px;
+}
+
+.totalLine,
+.grandTotalLine {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  color: #505050;
+  font-size: 13px;
+}
+
+.discountValue {
+  color: #ea4a4a;
+}
+
+.taxValue {
+  color: #2eb67d;
+}
+
+.grandTotalLine {
+  margin-top: 6px;
+  padding-top: 10px;
+  border-top: 1px solid #eef0f3;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.checkoutBtn {
+  width: 100%;
+  height: 38px;
+  margin-top: 6px;
+  border: 0;
+  border-radius: 4px;
+  background: #0db14b;
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.paymentLogos {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.paymentLogos img {
+  width: 28px;
+  height: 18px;
+  object-fit: contain;
+  opacity: 0.9;
+}
+
+.benefitsRow {
+  display: flex;
+  justify-content: flex-start;
+  gap: 18px;
+}
+
+.benefitCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  flex: 0 0 auto;
+  width: auto;
+  min-height: 48px;
+  padding: 0;
+  background: transparent;
+  box-sizing: border-box;
+}
+
+.benefitIcon {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #dfe4ea;
+  color: #8b96a5;
+  flex: 0 0 auto;
+}
+
+.benefitCard strong {
+  display: block;
+  color: #1a1a1a;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.benefitCard p {
+  margin: 0;
+  color: #8b96a5;
+  font-size: 12px;
+  line-height: 1.25;
+}
+
+.savedLaterSection {
+  padding: 22px 24px 24px;
+  height:475px;
+}
+
+.savedLaterGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  
+}
+
+.savedCard {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.savedCardImage {
+  width: 275px;
+  height: 240px;
+  margin-top: 14px;;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  object-fit: contain;
+  padding: 42px;
+  background: #f8fbff;
+}
+
+.savedCard strong {
+  color: #1a1a1a;
+  font-size: 14px;
+}
+
+.savedCard p {
+  margin: 0;
+  color: #505050;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.savedCardTitleMain,
+.savedCardTitleSuffix {
+  display: block;
+}
+
+@media (max-width: 1100px) {
+  .benefitsRow,
+  .savedLaterGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .benefitsRow {
+    display: grid;
+    gap: 12px;
+  }
+
+  .benefitCard {
+    width: 100%;
+  }
+}
+
+.moveBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  width: fit-content;
+  border: 1px solid #dfe4ea;
+  border-radius: 4px;
+  padding: 0 10px;
+  height: 40px;
+
+  background: #fff;
+  color: #1a73e8;
+  cursor: pointer;
+}
+
+.cartPromoBanner {
+  margin-bottom: 94px;
+}
+
+@media (max-width: 1100px) {
+  .cartTopGrid {
+    grid-template-columns: 1fr;
+  }
+}
