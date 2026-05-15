@@ -20,15 +20,12 @@ test:
   port: <%= ENV.fetch("BACKEND_DATABASE_PORT", 3306) %>
 
 production:
-  primary: &primary_production
-    <<: *default
-    database: <%= ENV.fetch("DATABASE_NAME", "defaultdb") %>
-    host: <%= ENV.fetch("BACKEND_DATABASE_HOST", "localhost") %>
-    username: <%= ENV.fetch("BACKEND_DATABASE_USER", "root") %>
-    password: <%= ENV.fetch("BACKEND_DATABASE_PASSWORD", "") %>
-    port: <%= ENV.fetch("BACKEND_DATABASE_PORT", 3306) %>
-    ssl_mode: :verify_identity
-    ssl_verify: false
+  adapter: mysql2
+  encoding: utf8mb4
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  url: <%= ENV['DATABASE_URL'] %>
+  ssl_mode: :disabled
+  sslverify: false
 
 
   cache:
