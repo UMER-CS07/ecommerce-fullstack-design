@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './AdminPanel.css';
 
-const API_URL = 'http://localhost:3000/api/v1/products';
+const API_URL = import.meta.env.VITE_API_BASE_URL ? `${import.meta.env.VITE_API_BASE_URL}/products` : 'https://ecommerce-fullstack-design-25oo.onrender.com/api/v1/products';
 
 const emptyForm = {
   name: '',

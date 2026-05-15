@@ -3,7 +3,7 @@ import axios from 'axios';
 import authService from '../services/authService';
 
 const CartContext = createContext(null);
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3000/api/v1';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://ecommerce-fullstack-design-25oo.onrender.com/api/v1';
 
 export const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);

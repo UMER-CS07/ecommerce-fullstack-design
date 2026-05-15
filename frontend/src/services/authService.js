@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:3000'; // Make sure this matches your Rails port
+const API_URL = import.meta.env.VITE_API_BASE_URL?.replace('/api/v1', '') || 'https://ecommerce-fullstack-design-25oo.onrender.com'; 
 
 const login = async (email, password) => {
   const response = await axios.post(`${API_URL}/login`, {

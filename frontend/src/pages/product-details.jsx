@@ -6,7 +6,7 @@ import usFlagImg from '../assets/us.png';
 import walletImg from '../assets/wallet.png';
 import './product-details.css';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3000/api/v1';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://ecommerce-fullstack-design-25oo.onrender.com/api/v1';
 
 const assetModules = import.meta.glob('../assets/*', {
   eager: true,
