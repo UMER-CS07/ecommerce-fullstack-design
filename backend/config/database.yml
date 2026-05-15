@@ -20,6 +20,19 @@ test:
   port: <%= ENV.fetch("BACKEND_DATABASE_PORT", 3306) %>
 
 production:
-  <<: *default
-  url: <%= ENV['DATABASE_URL'] %>
-  ssl_mode: :verify_none
+  primary: &primary_production
+    <<: *default
+    url: <%= ENV['DATABASE_URL'] %>
+    ssl_mode: :verify_none
+
+  cache:
+    <<: *primary_production
+    database: <%= ENV['DATABASE_NAME'] || 'defaultdb' %>_cache
+
+  queue:
+    <<: *primary_production
+    database: <%= ENV['DATABASE_NAME'] || 'defaultdb' %>_queue
+
+  cable:
+    <<: *primary_production
+    database: <%= ENV['DATABASE_NAME'] || 'defaultdb' %>_cable
