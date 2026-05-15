@@ -20,8 +20,6 @@ test:
   port: <%= ENV.fetch("BACKEND_DATABASE_PORT", 3306) %>
 
 production:
-  adapter: mysql2
-  encoding: utf8mb4
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  <<: *default
   url: <%= ENV['DATABASE_URL'] %>
   ssl_mode: :verify_none
