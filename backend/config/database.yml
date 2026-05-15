@@ -22,11 +22,15 @@ test:
 production:
   primary: &primary_production
     <<: *default
-    database: backend_production
-    host: <%= ENV.fetch("BACKEND_DATABASE_HOST", "127.0.0.1") %>
-    username: root
-    password: MEHARZ499206
+    database: <%= ENV.fetch("DATABASE_NAME", "defaultdb") %>
+    host: <%= ENV.fetch("BACKEND_DATABASE_HOST", "localhost") %>
+    username: <%= ENV.fetch("BACKEND_DATABASE_USER", "root") %>
+    password: <%= ENV.fetch("BACKEND_DATABASE_PASSWORD", "") %>
     port: <%= ENV.fetch("BACKEND_DATABASE_PORT", 3306) %>
+    ssl_mode: :verify_identity
+    ssl_verify: false
+
+
   cache:
     <<: *primary_production
     database: backend_production_cache
@@ -39,3 +43,4 @@ production:
     <<: *primary_production
     database: backend_production_cable
     migrations_paths: db/cable_migrate
+
