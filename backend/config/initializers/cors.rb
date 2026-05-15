@@ -1,7 +1,9 @@
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    # Add your Vercel URL here!
-    origins 'https://ecommerce-fullstack-design-woad.vercel.app', 'http://localhost:5173'
+    # This allows all Vercel preview links and your local development
+    origins 'https://ecommerce-fullstack-design-woad.vercel.app', 
+            /https:\/\/.*\.vercel\.app/,
+            'http://localhost:5173'
 
     resource '*',
       headers: :any,
